@@ -94,6 +94,7 @@ if __name__ == '__main__':
 ## Изменение правил и получение доменного имени
 
 Необходимо изменить alertmanager.yml на отправку уведомлений в webhook
+Пока для тестов сделал простую конфигурацию
 ```
 route:
   receiver: 'telegram-webhook'
@@ -118,7 +119,8 @@ curl -X POST https://api.telegram.org/bot<ТОКЕН>/setWebhook?url=https://wh1
 ```
 curl https://api.telegram.org/bot<ТОКЕН>/getWebhookInfo
 ```
-![image](https://github.com/user-attachments/assets/8029ba1a-2563-4a5a-a3de-fab929372be3)
+![image](https://github.com/user-attachments/assets/7d9314b7-6601-42cf-95b3-df6e2f145d9a)
+
 
 
 ## Проверка, отправка тестового test_payload.json
