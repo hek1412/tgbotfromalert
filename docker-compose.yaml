@@ -1,0 +1,19 @@
+services:
+  telegram-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: telegram-bot-alert
+    ports:
+      - "35111:5000"  # Проброс порта 5000 контейнера на порт 35111 хоста
+    restart: always
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TOKEN}
+      - TELEGRAM_CHAT_ID=${CHAT_ID}
+    networks:
+      - monitoring-network
+   
+networks:
+  monitoring-network:
+    name: monitoring-network
+    external: true

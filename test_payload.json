@@ -1,0 +1,17 @@
+{
+    "receiver": "telegram-webhook",
+    "status": "firing",
+    "alerts": [
+      {
+        "status": "firing",
+        "labels": {
+          "alertname": "HighCPUUsage",
+          "instance": "server1"
+        },
+        "annotations": {
+          "summary": "High CPU usage detected",
+          "description": "CPU usage is above 80% for more than 5 minutes."
+        }
+      }
+    ]
+  }
